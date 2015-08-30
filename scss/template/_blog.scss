@@ -112,7 +112,7 @@
         border-radius: $border-radius;
         padding: 0.1rem 0.4rem;
         margin-bottom: 0.2rem;
-        transition: all 500ms ease;
+        @include transition(all 0.5s ease);
         color: $yellow;
         &:hover {
             color: $cyan;

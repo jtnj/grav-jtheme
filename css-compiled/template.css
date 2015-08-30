@@ -484,15 +484,31 @@ td {
     transform: scaleX(0.75); }
 
 .button-secondary {
-  background: #fff;
-  color: #F6635E;
-  border: 1px solid #F6635E;
-  border-radius: 3px; }
-  .button-secondary:hover {
-    background: #F6635E;
-    color: #fff; }
-  .button-secondary:active {
-    box-shadow: 0 1px 0 #f32b24; }
+  position: relative; }
+  .button-secondary:before, .button-secondary:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #66cccc;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    -moz-transform: scaleX(0);
+    -ms-transform: scaleX(0);
+    -o-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease; }
+  .button-secondary:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(0.75);
+    -moz-transform: scaleX(0.75);
+    -ms-transform: scaleX(0.75);
+    -o-transform: scaleX(0.75);
+    transform: scaleX(0.75); }
 
 .bullets {
   margin: 1.7rem 0;
@@ -722,7 +738,9 @@ td {
   border-radius: 3px;
   padding: 0.1rem 0.4rem;
   margin-bottom: 0.2rem;
-  transition: all 500ms ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   color: #ffcc66; }
   .tags a:hover {
     color: #66cccc;
@@ -867,7 +885,9 @@ ul.pagination {
     float: left; }
     .search-container .search-input-container input {
       margin: 0;
-      transition: all 500ms ease; }
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      transition: all 0.5s ease; }
 
 .scrolled .search-container {
   padding: .4rem; }
