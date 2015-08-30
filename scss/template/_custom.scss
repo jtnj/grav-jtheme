@@ -1,0 +1,36 @@
+.search-container {
+    display: none;
+    padding: 1.4rem .4rem;
+    overflow: hidden;
+    .search-input-container {
+        width: 88%;
+        float: left;
+        input {
+            margin: 0;
+            transition: all 500ms ease;
+        }
+    }
+}
+
+.scrolled {
+    .search-container {
+        padding: .4rem;
+    }
+}
+
+.search-close {
+    font-size: 2.1rem;
+    cursor: pointer;
+    float: right;
+    color: $orange;
+}
+
+.sb-active-right {
+    .fa-angle-double-left:before {
+        content: "\f101";
+    }
+}
+
+.sb-slidebar.sb-right {
+    padding: 1em;
+}

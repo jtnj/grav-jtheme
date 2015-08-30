@@ -1,0 +1,26 @@
+.button {
+    @extend %button;
+    position: relative;
+    &:before,
+    &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        background-color: $orange;
+        visibility: hidden;
+        @include transform(scaleX(0));
+        @include transition(all 0.2s ease);
+    }
+    &:hover:before {
+        visibility: visible;
+        @include transform(scaleX(0.75));
+    }
+}
+
+.button-secondary {
+    @extend %button;
+    @include button-color($secondary-link);
+}
